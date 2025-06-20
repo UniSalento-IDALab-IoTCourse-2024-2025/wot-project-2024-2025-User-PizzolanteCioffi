@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to WatchApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #d0f0ec, #a6e3d6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            padding: 40px 60px;
+            max-width: 550px;
+        }
+
+        .container h1 {
+            color: #2a9d8f;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            color: #444;
+            font-size: 1.1em;
+            margin-bottom: 18px;
+        }
+
+        .container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto 20px auto;
+            text-align: left;
+            max-width: 400px;
+        }
+
+        .container ul li {
+            background: #f1fdfb;
+            border: 1px solid #cceee7;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #3ba99c;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #6c757d;
+        }
+
+        .footer i {
+            color: #3ba99c;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="icon">
+        <i class="fas fa-heartbeat"></i>
+    </div>
+    <h1>Welcome to <span style="color:#007bff;">WatchApp</span>, %s!</h1>
+    <p>Thank you for choosing us to support your health journey.<br>We’re happy to have you with us ❤</p>
+    <p>Here are your login details to access the application:</p>
+    <ul>
+        <li><strong>Email:</strong> %s</li>
+        <li><strong>Password:</strong> the one you chose during registration</li>
+    </ul>
+    <p>If you didn’t register for this service, please ignore this email or contact our support team.</p>
+    <div class="footer">
+        <i class="fas fa-user-md"></i> The WatchApp Team
+    </div>
+</div>
+</body>
+</html>
