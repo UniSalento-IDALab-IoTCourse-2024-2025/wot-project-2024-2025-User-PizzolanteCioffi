@@ -8,7 +8,7 @@ group = 'it.unisalento.IoT2425.watchApp'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility='21'
+    sourceCompatibility='23'
 }
 
 repositories {
