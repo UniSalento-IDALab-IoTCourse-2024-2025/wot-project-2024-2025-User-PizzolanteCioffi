@@ -8,7 +8,9 @@ group = 'it.unisalento.IoT2425.watchApp'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility='23'
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(23))
+    }
 }
 
 repositories {
