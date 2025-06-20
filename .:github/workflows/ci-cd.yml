@@ -14,10 +14,19 @@ jobs:
           - 27017:27017
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+      
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v2
+      
       - name: Make gradlew executable
         run: chmod +x gradlew
+      
       - name: Run tests
         run: ./gradlew test
 
@@ -26,10 +35,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+      
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v2
+      
       - name: Make gradlew executable
         run: chmod +x gradlew
+      
       - name: Build project
         run: ./gradlew build
 
@@ -38,15 +56,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+      
       - name: Make gradlew executable
         run: chmod +x gradlew
+      
       - name: Build JAR
         run: ./gradlew bootJar
+      
       - name: Copy files to server
         env:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           chmod 600 $AWS_SECRET_ACCESS_KEY
           scp -o StrictHostKeyChecking=no -i $AWS_SECRET_ACCESS_KEY build/libs/User-0.0.1-SNAPSHOT.jar ubuntu@54.167.160.164:/home/ubuntu/user
-          scp -o StrictHostKeyChecking=no -i $AWS_SECRET_ACCESS_KEY docker-compose.yml ubuntu54.167.160.164:/home/ubuntu/user
+          scp -o StrictHostKeyChecking=no -i $AWS_SECRET_ACCESS_KEY docker-compose.yml ubuntu@54.167.160.164:/home/ubuntu/user
           ssh -o StrictHostKeyChecking=no -i $AWS_SECRET_ACCESS_KEY ubuntu@54.167.160.164 "sudo docker kill user-be; sudo docker kill user-db; sudo docker compose up -d"
