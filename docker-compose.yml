@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   user-be:
-    image: openjdk:23
+    image: openjdk:21
     container_name: user-be
     ports:
       - 8080:8080
