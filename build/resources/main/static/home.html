@@ -2,7 +2,8 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Grazie per l'autenticazione con Fitbit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticazione completata</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
@@ -10,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #d0f0ec, #a6e3d6); /* verde menta acqua */
+            background: linear-gradient(135deg, #d0f0ec, #a6e3d6);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,20 +23,10 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             text-align: center;
-            padding: 40px 60px;
-            max-width: 500px;
-        }
-
-        .container h1 {
-            color: #2a9d8f;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .container p {
-            color: #444;
-            font-size: 1.2em;
-            margin-bottom: 20px;
+            padding: 30px 20px;
+            margin: 0 20px;
+            width: 100%;
+            max-width: 420px;
         }
 
         .icon {
@@ -44,9 +35,21 @@
             margin-bottom: 20px;
         }
 
+        h1 {
+            color: #2a9d8f;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #444;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
         .footer {
             margin-top: 25px;
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #6c757d;
         }
 
@@ -59,19 +62,18 @@
 <body>
 <div class="container">
     <div class="icon">
-        <i class="fas fa-leaf"></i>
+        <i class="fas fa-check-circle"></i>
     </div>
-    <h1>Grazie per averci scelto!</h1>
-    <p>Hai effettuato con successo l'autenticazione con Fitbit.<br>
-        Puoi ora chiudere questa pagina e tornare all'applicazione manualmente.</p>
+    <h1>Autenticazione completata</h1>
+    <p>Hai autorizzato correttamente l'accesso Fitbit.<br>Puoi ora tornare all'app per continuare.</p>
     <div class="footer">
         <i class="fas fa-user-md"></i> WatchApp Health Platform
     </div>
 </div>
+
 <script>
     window.onload = () => {
         if (window.ReactNativeWebView) {
-            // Invia messaggio alla tua WebView in React Native
             window.ReactNativeWebView.postMessage("FITBIT_DONE");
         }
     };

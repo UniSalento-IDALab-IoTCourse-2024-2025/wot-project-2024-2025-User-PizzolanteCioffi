@@ -268,7 +268,6 @@ public class UserRestController {
 
             restTemplate.exchange(uri, HttpMethod.PUT, entityPut, Void.class);
 
-
         } else if(loginDTO.getRole().equals("Patient")){
             Optional<Patient> patient = patientRepository.findByEmail(authentication.getName());
             if (patient.isEmpty()) {
