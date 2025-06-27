@@ -10,7 +10,7 @@ import java.util.Map;
 @Service
 public class MqttPublisherService {
     private static final String BROKER_URL = "tcp://23.21.148.21:1883"; // o IP del broker MQTT
-    private static final String CLIENT_ID = "spring-mqtt-publisher";
+    private static final String CLIENT_ID = "spring-mqtt-publisher-user";
 
     private MqttClient mqttClient;
 
