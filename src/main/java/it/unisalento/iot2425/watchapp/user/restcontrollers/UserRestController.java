@@ -196,6 +196,7 @@ public class UserRestController {
         patientDTO.setAccessToken(patient.get().getAccessToken());
         patientDTO.setRefreshToken(patient.get().getRefreshToken());
         patientDTO.setAssistantId(patient.get().getAssistantId());
+        patientDTO.setFcmToken(patient.get().getFcmToken());
 
         return patientDTO;
     }
@@ -223,6 +224,7 @@ public class UserRestController {
         assistantDTO.setAccessToken(assistant.get().getAccessToken());
         assistantDTO.setRefreshToken(assistant.get().getRefreshToken());
         assistantDTO.setPatientId(assistant.get().getPatientId());
+        assistantDTO.setFcmToken(assistant.get().getFcmToken());
 
         return assistantDTO;
     }
