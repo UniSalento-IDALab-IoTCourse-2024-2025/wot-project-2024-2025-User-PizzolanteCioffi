@@ -55,7 +55,7 @@ public class UserRegistrationRestController {
     )
     public ResponseEntity<?> redirectPatient() throws JsonProcessingException {
 
-    String redirectUrl= UriComponentsBuilder.fromHttpUrl("http://www.fitbit.com/oauth2/authorize")
+    String redirectUrl= UriComponentsBuilder.fromHttpUrl("https://www.fitbit.com/oauth2/authorize")
             .queryParam("response_type", "code")
             .queryParam("client_id", "23QJNJ")
             .queryParam("redirect_uri", url + "/api/temporary")
