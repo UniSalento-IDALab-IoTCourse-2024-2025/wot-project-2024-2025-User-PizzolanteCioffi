@@ -65,7 +65,9 @@ Il microservizio espone le seguenti funzionalità tramite API RESTful:
 - accesso all’elenco completo dei pazienti associati ad un caregiver;
 - accesso all’elenco completo dei caregiver;
 - rimozione di un paziente dal database.
+
 User interagisce con altri componenti del sistema, svolgendo un ruolo centrale nella gestione dell’identità e delle autorizzazioni:
+
 - con il frontend, per gestire le operazioni di registrazione, login, gestione profilo utente e accesso autenticato ai servizi;
 - con Notification, per fornire le informazioni di profilo necessarie alla personalizzazione dei messaggi;
 - con DataCollector, per associare correttamente i dati raccolti a un determinato paziente;
