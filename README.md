@@ -54,7 +54,23 @@ L’applicazione consente all’utente di visualizzare in tempo reale i dati rac
 - Frontend: [Frontend](https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-Frontend-PizzolanteCioffi)
 - Pagina web: [Presentation](https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-Presentation-PizzolanteCioffi)
 
-
+## User Service
+Il microservizio User è il primo punto di contatto per l’accesso ai servizi dell’applicazione e ne garantisce la sicurezza attraverso l’uso di token JWT (JSON Web Token). Ogni volta che un utente effettua il login, il microservizio genera un token firmato che viene poi utilizzato per autenticare tutte le richieste successive.
+Il microservizio espone le seguenti funzionalità tramite API RESTful:
+- login e generazione del token JWT per l’autenticazione;
+- registrazione di nuovi utenti nel sistema;
+- aggiornamento dei dati di profilo utente;
+- verifica del token JWT e recupero del payload associato;
+- recupero dei dati di un utente specifico tramite patientId o assistantId;
+- accesso all’elenco completo dei pazienti associati ad un caregiver;
+- accesso all’elenco completo dei caregiver;
+- rimozione di un paziente dal database.
+User interagisce con altri componenti del sistema, svolgendo un ruolo centrale nella gestione dell’identità e delle autorizzazioni:
+- con il frontend, per gestire le operazioni di registrazione, login, gestione profilo utente e accesso autenticato ai servizi;
+- con Notification, per fornire le informazioni di profilo necessarie alla personalizzazione dei messaggi;
+- con DataCollector, per associare correttamente i dati raccolti a un determinato paziente;
+- con DataPrediction, per validare l’identità del soggetto prima dell’elaborazione dei dati e dell’invio al modello predittivo.
+La comunicazione con il frontend e con gli altri microservizi avviene tramite API RESTful oppure, in alcuni casi, attraverso messaggi MQTT veicolati dal message broker RabbitMQ. Questo consente sia l'interazione sincrona con l'interfaccia utente, sia una comunicazione asincrona e decentrata tra alcuni moduli interni al sistema.
 
 
 
