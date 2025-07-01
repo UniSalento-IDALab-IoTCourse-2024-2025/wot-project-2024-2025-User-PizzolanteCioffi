@@ -20,7 +20,7 @@ Questa soluzione è progettata per garantire:
 
 Il sistema è progettato secondo un’architettura a microservizi, scalabile e modulare, che consente la gestione indipendente dei diversi componenti funzionali. L’infrastruttura si basa su servizi backend containerizzati (Docker) e su un'app mobile utilizzata dal paziente.
 
-![IMAGE 2025-07-01 17:47:54](https://github.com/user-attachments/assets/e789da38-c2d2-4d80-9cba-3dfba9060f5c)
+<img src="https://github.com/user-attachments/assets/e789da38-c2d2-4d80-9cba-3dfba9060f5c" alt="Architettura del sistema" width="600"/>
 
 ### Servizi Backend
 
