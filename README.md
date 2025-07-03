@@ -52,7 +52,7 @@ L’applicazione consente all’utente di visualizzare in tempo reale i dati rac
 - Notification Service: [Notification](https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-Notification-PizzolanteCioffi)
 - AIModel Service: [AIModel](https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-AIModel-PizzolanteCioffi)
 - Frontend: [Frontend](https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-Frontend-PizzolanteCioffi)
-- Pagina web: [Presentation](https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-Presentation-PizzolanteCioffi)
+- Pagina web: [Presentation]([https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-Presentation-PizzolanteCioffi](https://unisalento-idalab-iotcourse-2024-2025.github.io/wot-project-2024-2025-Presentation-PizzolanteCioffi/))
 
 ## User Service
 Il microservizio User è il primo punto di contatto per l’accesso ai servizi dell’applicazione e ne garantisce la sicurezza attraverso l’uso di token JWT (JSON Web Token). Ogni volta che un utente effettua il login, il microservizio genera un token firmato che viene poi utilizzato per autenticare tutte le richieste successive.
